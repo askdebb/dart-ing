@@ -36,17 +36,30 @@ void main() {
 
   // print(results);
 
-  Set<String> rollCall = {'James', 'Francis', 'Nyarko'};
-  rollCall.add("Banana");
-  bool findIndex = rollCall.contains("Francis");
-  if (findIndex == true) {
-    print(rollCall.remove("Kofi"));
-  } else {
-    print(rollCall.add("Kofi"));
+  // Set<String> rollCall = {'James', 'Francis', 'Nyarko'};
+  // rollCall.add("Banana");
+  // bool findIndex = rollCall.contains("Francis");
+  // if (findIndex == true) {
+  //   print(rollCall.remove("Kofi"));
+  // } else {
+  //   print(rollCall.add("Kofi"));
+  // }
+  // final lengthOfRollCall = rollCall.length;
+  // print("Length is : $lengthOfRollCall");
+  // print(rollCall);
+
+  List<int> finalAnswers = [20, 30, 40, 50, 67, 43, 56, 81, 41, 100];
+  // for (int finalAnswer in finalAnswers) {
+  //   if (finalAnswer >= 50) {
+  //     print(finalAnswer);
+  //   } else {
+  //     print(" less than 50 values:  $finalAnswer");
+  //   }
+  // }
+
+  for (int someValue in finalAnswers.where((s) => (s > 20 && s < 80))) {
+    print("Some values between 20 and 80: $someValue.");
   }
-  final lengthOfRollCall = rollCall.length;
-  print("Length is : $lengthOfRollCall");
-  print(rollCall);
 }
 
 sayHello(aName) {
