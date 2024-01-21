@@ -66,57 +66,81 @@ void main() {
   //   print("Some values between 20 and 80: $someValue.");
   // }
 
-  var females = {
-    1: "Millicent",
-    "name": "Hanna",
-    "a": "Ajoke",
-    5: 9,
-    'rand': [
-      4,
-      "pencil",
-      {6, 'hornam'}
-    ]
+  // var females = {
+  //   1: "Millicent",
+  //   "name": "Hanna",
+  //   "a": "Ajoke",
+  //   5: 9,
+  //   'rand': [
+  //     4,
+  //     "pencil",
+  //     {6, 'hornam'}
+  //   ]
+  // };
+
+  // var femaleKeys = females.keys;
+  // var femaleValues = females.values;
+  // print("Keys of female Map is: $femaleKeys");
+  // print("Values of female Map is: $femaleValues");
+  // print(females.values);
+  // print(females);
+
+  // var femalesRandValues = females["rand"];
+  // if (femalesRandValues is List) {
+  //   var femalesRandValuesSet = femalesRandValues[2];
+  //   print(femalesRandValuesSet);
+  //   femalesRandValuesSet.add("buenedi");
+  //   print(femalesRandValuesSet);
+  // }
+  // print(femalesRandValues);
+  // print(females);
+
+  // females['name'] = <String>{"Kofi", "Anima", "Anita"};
+  // females[1] = <int>[20, 40, 100, 43];
+  // var femalesFirstKeyValues = females[1];
+  // femalesFirstKeyValues is Set
+  //     ? femalesFirstKeyValues.remove(20)
+  //     : (females["salmon"] = <String>{"Hello", "Plantain", "Waakye"});
+  // print(femalesFirstKeyValues);
+  // print(females);
+
+  var enrolment = {
+    "Basic 7": {"A": 23, "B": 34},
+    "Basic 8": {"A": 56, "B": 59},
+    "Basic 9": {"A": 44, "B": 48}
   };
 
-  var femaleKeys = females.keys;
-  var femaleValues = females.values;
-  print("Keys of female Map is: $femaleKeys");
-  print("Values of female Map is: $femaleValues");
-  print(females.values);
-  print(females);
+  var enrolmentValues = enrolment.values;
 
-  var femalesRandValues = females["rand"];
-  if (femalesRandValues is List) {
-    var femalesRandValuesSet = femalesRandValues[2];
-    print(femalesRandValuesSet);
-    femalesRandValuesSet.add("buenedi");
-    print(femalesRandValuesSet);
+  var totalStudentInAClass = 0;
+  var totalStudentInBClass = 0;
+  int numListFirst;
+  int numListLast;
+  for (Map<String, int> enrolmentValue in enrolmentValues) {
+    numListFirst = enrolmentValue.values.first;
+    totalStudentInAClass += numListFirst;
+
+    numListLast = enrolmentValue.values.last;
+    totalStudentInBClass += numListLast;
   }
-  print(femalesRandValues);
-  print(females);
-
-  females['name'] = <String>{"Kofi", "Anima", "Anita"};
-  females[1] = <int>[20, 40, 100, 43];
-  var femalesFirstKeyValues = females[1];
-  femalesFirstKeyValues is Set
-      ? femalesFirstKeyValues.remove(20)
-      : (females["salmon"] = <String>{"Hello", "Plantain", "Waakye"});
-  print(femalesFirstKeyValues);
-  print(females);
+  print("All student in A class are: $totalStudentInAClass students.");
+  print("All student in B class are: $totalStudentInBClass students.");
+  int total = totalStudentInAClass + totalStudentInBClass;
+  print("The total number of students in the school is $total.");
 }
 
-sayHello(aName) {
-  return "$aName, welcome.";
-}
+// sayHello(aName) {
+//   return "$aName, welcome.";
+// }
 
-String introduction(nameHere, occupation) {
-  return "My name is $nameHere and a $occupation";
-}
+// String introduction(nameHere, occupation) {
+//   return "My name is $nameHere and a $occupation";
+// }
 
-String familyReunion(String firstPerson, String secondPerson) {
-  return "I'm delighted to have $firstPerson and $secondPerson here.";
-}
+// String familyReunion(String firstPerson, String secondPerson) {
+//   return "I'm delighted to have $firstPerson and $secondPerson here.";
+// }
 
-String partyInvitation({required String guest1, required String guest2}) {
-  return "$guest1 and $guest2 are invited to join us party";
-}
+// String partyInvitation({required String guest1, required String guest2}) {
+//   return "$guest1 and $guest2 are invited to join us party";
+// }
